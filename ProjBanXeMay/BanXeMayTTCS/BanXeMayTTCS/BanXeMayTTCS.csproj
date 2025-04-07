@@ -1,0 +1,445 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0763AC9A-9EFE-4DB5-B946-71B6D529705E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BanXeMayTTCS</RootNamespace>
+    <AssemblyName>BanXeMayTTCS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_motorcycle.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v24.2" />
+    <Reference Include="DevExpress.Drawing.v24.2" />
+    <Reference Include="DevExpress.Data.v24.2" />
+    <Reference Include="DevExpress.Data.Desktop.v24.2" />
+    <Reference Include="DevExpress.Utils.v24.2" />
+    <Reference Include="DevExpress.Sparkline.v24.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v24.2" />
+    <Reference Include="DevExpress.Printing.v24.2.Core" />
+    <Reference Include="DevExpress.XtraGrid.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\BackupDAO.cs" />
+    <Compile Include="DAO\CTDonDatHangDAO.cs" />
+    <Compile Include="DAO\DangNhapDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\DonDatHangDAO.cs" />
+    <Compile Include="DAO\XeMayDAO.cs" />
+    <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\PhieuDatKhDAO.cs" />
+    <Compile Include="DAO\PhieuNhapDAO.cs" />
+    <Compile Include="DTO\BackupHistory.cs" />
+    <Compile Include="DTO\CtDatHangKh.cs" />
+    <Compile Include="DTO\CTDonDatHang.cs" />
+    <Compile Include="DTO\CTPhieuNhap.cs" />
+    <Compile Include="DTO\DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\DonDatHang.cs" />
+    <Compile Include="DTO\XeMay.cs" />
+    <Compile Include="DTO\XeMayKH.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
+    <Compile Include="DTO\Loai.cs" />
+    <Compile Include="DTO\MyFormat.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="DTO\PhieuDatKh.cs" />
+    <Compile Include="DTO\PhieuNhap.cs" />
+    <Compile Include="GUI\CustomComponent\ItemDatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomComponent\ItemDatHang.designer.cs">
+      <DependentUpon>ItemDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomComponent\ItemXeMay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomComponent\ItemXeMay.designer.cs">
+      <DependentUpon>ItemXeMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomComponent\ItemGioHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomComponent\ItemGioHang.designer.cs">
+      <DependentUpon>ItemGioHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomComponent\PanelGioHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomComponent\PanelGioHang.designer.cs">
+      <DependentUpon>PanelGioHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomComponent\PanelListXeMay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomComponent\PanelListXeMay.designer.cs">
+      <DependentUpon>PanelListXeMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormBackupRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormBackupRestore.designer.cs">
+      <DependentUpon>FormBackupRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormDangKy.Designer.cs">
+      <DependentUpon>FormDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormDatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormDatHang.designer.cs">
+      <DependentUpon>FormDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormDoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormDoiMK.Designer.cs">
+      <DependentUpon>FormDoiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormGioHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormGioHang.Designer.cs">
+      <DependentUpon>FormGioHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormListXeMay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormListXeMay.Designer.cs">
+      <DependentUpon>FormListXeMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormMainKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormMainKH.designer.cs">
+      <DependentUpon>FormMainKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormMainNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormMainNV.Designer.cs">
+      <DependentUpon>FormMainNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormQLDonDatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormQLDonDatHang.Designer.cs">
+      <DependentUpon>FormQLDonDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormQLXeMay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormQLXeMay.Designer.cs">
+      <DependentUpon>FormQLXeMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormQLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormQLNhanVien.Designer.cs">
+      <DependentUpon>FormQLNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormQLPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormQLPhieuNhap.Designer.cs">
+      <DependentUpon>FormQLPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormQLTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormQLTaiKhoan.Designer.cs">
+      <DependentUpon>FormQLTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormRestoreLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormRestoreLog.designer.cs">
+      <DependentUpon>FormRestoreLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSuaCTDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSuaCTDonHang.Designer.cs">
+      <DependentUpon>FormSuaCTDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSuaCTPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSuaCTPhieuNhap.Designer.cs">
+      <DependentUpon>FormSuaCTPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormThemCTDonDatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormThemCTDonDatHang.Designer.cs">
+      <DependentUpon>FormThemCTDonDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormThemCTPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormThemCTPhieuNhap.Designer.cs">
+      <DependentUpon>FormThemCTPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormThemDonDatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormThemDonDatHang.Designer.cs">
+      <DependentUpon>FormThemDonDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\CustomComponent\ItemDatHang.resx">
+      <DependentUpon>ItemDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomComponent\ItemXeMay.resx">
+      <DependentUpon>ItemXeMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomComponent\ItemGioHang.resx">
+      <DependentUpon>ItemGioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomComponent\PanelGioHang.resx">
+      <DependentUpon>PanelGioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomComponent\PanelListXeMay.resx">
+      <DependentUpon>PanelListXeMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormBackupRestore.resx">
+      <DependentUpon>FormBackupRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDangKy.resx">
+      <DependentUpon>FormDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDatHang.resx">
+      <DependentUpon>FormDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDoiMK.resx">
+      <DependentUpon>FormDoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormGioHang.resx">
+      <DependentUpon>FormGioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormListXeMay.resx">
+      <DependentUpon>FormListXeMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormMainKH.resx">
+      <DependentUpon>FormMainKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormMainNV.resx">
+      <DependentUpon>FormMainNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormQLDonDatHang.resx">
+      <DependentUpon>FormQLDonDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormQLXeMay.resx">
+      <DependentUpon>FormQLXeMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormQLNhanVien.resx">
+      <DependentUpon>FormQLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormQLPhieuNhap.resx">
+      <DependentUpon>FormQLPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormQLTaiKhoan.resx">
+      <DependentUpon>FormQLTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormRestoreLog.resx">
+      <DependentUpon>FormRestoreLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSuaCTDonHang.resx">
+      <DependentUpon>FormSuaCTDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSuaCTPhieuNhap.resx">
+      <DependentUpon>FormSuaCTPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormThemCTDonDatHang.resx">
+      <DependentUpon>FormThemCTDonDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormThemCTPhieuNhap.resx">
+      <DependentUpon>FormThemCTPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormThemDonDatHang.resx">
+      <DependentUpon>FormThemDonDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="DTO\DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DTO\DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DTO\DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_blue_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_motorcycle.ico" />
+    <None Include="Resources\watch1.png" />
+    <None Include="Resources\watch.png" />
+    <None Include="Resources\shopping-cart-free-icon-font.png" />
+    <None Include="Resources\users-free-icon-font.png" />
+    <None Include="Resources\sign-in-free-icon-font.png" />
+    <None Include="Resources\next_black_16px.png" />
+    <None Include="Resources\mode-portrait-free-icon-font_white_24px.png" />
+    <None Include="Resources\user_gradient_128px.png" />
+    <None Include="Resources\png-clipart-color-clock-logo-creative-time-watch-company-creative-artwork.png" />
+    <None Include="Resources\clock-five-free-icon-font_white_24px.png" />
+    <None Include="Resources\error_image.png" />
+    <None Include="Resources\500-500-breguet-new.png" />
+    <None Include="Resources\add-free-icon-font_green_24px.png" />
+    <None Include="Resources\add-free-icon-font_green_24px1.png" />
+    <None Include="Resources\account_white_20px.png" />
+    <None Include="Resources\document-free-icon-font.png" />
+    <None Include="Resources\folder-download-free-icon-font.png" />
+    <None Include="Resources\home-free-icon-font.png" />
+    <Content Include="Image\xemay1.jpg" />
+    <Content Include="Image\xemay10.jpg" />
+    <Content Include="Image\xemay11.jpg" />
+    <Content Include="Image\xemay12.jpg" />
+    <Content Include="Image\xemay13.jpg" />
+    <Content Include="Image\xemay14.jpg" />
+    <Content Include="Image\xemay15.jpg" />
+    <Content Include="Image\xemay16.jpg" />
+    <Content Include="Image\xemay17.jpg" />
+    <Content Include="Image\xemay18.jpg" />
+    <Content Include="Image\xemay19.jpg" />
+    <Content Include="Image\xemay2.jpg" />
+    <Content Include="Image\xemay20.jpg" />
+    <Content Include="Image\xemay21.jpg" />
+    <Content Include="Image\xemay22.jpg" />
+    <Content Include="Image\xemay23.jpg" />
+    <Content Include="Image\xemay24.jpg" />
+    <Content Include="Image\xemay25.jpg" />
+    <Content Include="Image\xemay26.jpg" />
+    <Content Include="Image\xemay27.jpg" />
+    <Content Include="Image\xemay28.jpg" />
+    <Content Include="Image\xemay29.jpg" />
+    <Content Include="Image\xemay3.jpg" />
+    <Content Include="Image\xemay30.jpg" />
+    <Content Include="Image\xemay31.jpg" />
+    <Content Include="Image\xemay32.jpg" />
+    <Content Include="Image\xemay33.jpg" />
+    <Content Include="Image\xemay34.jpg" />
+    <Content Include="Image\xemay35.jpg" />
+    <Content Include="Image\xemay36.jpg" />
+    <Content Include="Image\xemay37.jpg" />
+    <Content Include="Image\xemay38.jpg" />
+    <Content Include="Image\xemay39.jpg" />
+    <Content Include="Image\xemay4.jpg" />
+    <Content Include="Image\xemay40.jpg" />
+    <Content Include="Image\xemay41.jpg" />
+    <Content Include="Image\xemay42.jpg" />
+    <Content Include="Image\xemay43.jpg" />
+    <Content Include="Image\xemay44.jpg" />
+    <Content Include="Image\xemay45.jpg" />
+    <Content Include="Image\xemay46.jpg" />
+    <Content Include="Image\xemay47.jpg" />
+    <Content Include="Image\xemay48.jpg" />
+    <Content Include="Image\xemay49.jpg" />
+    <Content Include="Image\xemay5.jpg" />
+    <Content Include="Image\xemay50.jpg" />
+    <Content Include="Image\xemay6.jpg" />
+    <Content Include="Image\xemay7.jpg" />
+    <Content Include="Image\xemay8.jpg" />
+    <Content Include="Image\xemay9.jpg" />
+    <Content Include="Resources\init_image.png" />
+    <None Include="Resources\sign-out-alt-free-icon-font_blue_24px.png" />
+    <None Include="Resources\reload.png" />
+    <None Include="Resources\trash-free-icon-font_blue_24px.png" />
+    <None Include="Resources\trash_blue_24px.png" />
+    <None Include="Resources\edit-free-icon-font_blue_24px.png" />
+    <None Include="Resources\diskette_blue_24px.png" />
+    <None Include="Resources\disk-free-icon-font_blue_24px.png" />
+    <None Include="Resources\add-free-icon-font_blue_24px.png" />
+    <None Include="Resources\edit_blue_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Backup\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
